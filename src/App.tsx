@@ -14,10 +14,10 @@ function App() {
   ];
 
   const imageData = [
-    { image: Logo, alt: 'Logo', caption:'Head Shot', size:'h-[150px]' },
-    { image: HeadShot, alt: 'Logo', caption:'Me with my students', size:'h-[200px]' },
-    { image: Logo, alt: 'Logo', caption:'I received the SCMNS Honors Award during my masters', size:'h-[130px]' },
-    { image: Logo, alt: 'Logo', caption:'I play the keyboard and direct music for my church', size:'h-[200px]' },
+    { image: Logo, alt: 'Logo', caption:'Head Shot', size:50 },
+    { image: HeadShot, alt: 'Logo', caption:'Me with my students', size:70 },
+    { image: Logo, alt: 'Logo', caption:'I received the SCMNS Honors Award during my masters', size:55 },
+    { image: Logo, alt: 'Logo', caption:'I play the keyboard and direct music for my church', size:90 },
   ]
 
   return (
@@ -83,22 +83,40 @@ function App() {
               <p className='pb-2'>
                 Let’s build the future—securely and quantum-ready.
               </p>
-              <div className='block md:flex w-[90%]'>
-                <Button href="https://github.com/oluwoleadetifa" className='btn-secondary mr-2 mb-2' label='See my Works' icon='uil:suitcase' />
+              <div className='block md:flex w-[90%] items-end'>
+                <Button href="https://github.com/oluwoleadetifa" className='btn-secondary mr-2' label='See my Works' icon='uil:suitcase' />
                 <Button href="https://docs.google.com/document/d/1VbixsI5oT0q1Vntr3NrS37yXjCmPxihK4H9vW4Hj-lg/export?format=pdf" className='btn-third bg-gray-300' label='Download my Resume' icon='material-symbols:download'/>
               </div>
             </div>
           </div>
           {/* four column picture */}
-          <div className='block md:flex justify-evenly items-end py-3'>
-            {imageData.map((data) =>
-              <div className='w-[22%]'>
-                <img src={data.image} className={data.size + " w-[100%] rounded-2xl object-cover"} />
-                <p>
+          <div className='block md:flex justify-evenly items-end py-3 px-4 md:px-10 h-fit'>
+            {imageData.map((data, id) =>
+              <div style={{height: `${100 - data.size - 20}%`}} className='w-[80%] md:w-[22%] my-9 mx-auto' id={`${id}`}>
+                <div className={`h-[${100 - data.size - 20}%] w-[100%]`}></div>
+                <img
+                  src={data.image}
+                  className={'rounded-2xl object-cover'}
+                  style={{ height: `${data.size}%`, width: '100%' }}
+                  alt={`Image ${id}`} />
+                <p className='h-[50px] text-center'>
                   {data.caption}
                 </p>
               </div>
             )}
+          </div>
+          {/* three column project area
+           */}
+          <div className='px-4 md:px-10 py-8'>
+            <div className='py-2 bg-gray-400 w-[130px] rounded-2xl text-center text-white text-sm font-bold'>Portfolio</div>
+            {/* <div className='w-[100%] sm:w-[45%] text-4xl font-bold flex border-left'>
+              See my Projects
+            </div> */}
+            <div className="flex items-center gap-3 text-4xl mt-3">
+                <hr className="rotate-90 w-[2.25rem] border-t-4 border-gray-500" />
+                <span>See my Projects</span>
+            </div>
+
           </div>
         </div>
       </div>  
