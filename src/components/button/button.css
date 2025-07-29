@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.btn-primary{
+  @apply bg-white hover:bg-red-400
+   text-black font-bold py-1.5
+    cursor-pointer rounded-xl w-[130px] text-xs
+    flex items-center justify-center;
+}
+
+.btn-secondary{
+  @apply bg-black hover:bg-blue-700 text-white font-bold py-3
+    cursor-pointer rounded-xl text-xs w-[140px]
+    flex items-center justify-center;
+}
+
+.btn-third{
+   @apply bg-gray-400 hover:bg-red-400
+   text-black font-bold p-3
+    cursor-pointer rounded-xl w-[170px] text-xs
+    flex items-center justify-center;
+}
