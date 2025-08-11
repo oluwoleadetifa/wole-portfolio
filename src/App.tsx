@@ -3,7 +3,7 @@ import Button from './components/button/Button';
 import { Icon } from "@iconify/react";
 import Logo from "./assets/wole_logo.jpg";
 import HeadShot from "./assets/Head_shot.jpg";
-import Frame from './components/frame/frame';
+import Frame from './components/frame/Frame';
 
 
 function App() {
