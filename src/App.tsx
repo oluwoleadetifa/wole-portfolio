@@ -82,7 +82,7 @@ function App() {
           </div>
         </nav>
         {/* hero */}
-        <div className='px-4 md:px-10 bg-gray-950'>
+        <div className='px-4 md:px-10 bg-gray-950 h-[65vh] md:h-[50vh] flex flex-col justify-evenly'>
           <div className='flex justify-between items-center'>
               <div className='text-4xl w-[75%] md:w-[60%]'>
                 <span className='font-bold'>Software Engineer living in</span>

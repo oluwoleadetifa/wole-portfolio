@@ -14,7 +14,8 @@ const Frame: React.FC<ProjectCardProps> = ({ title, stack, description, link, im
 
   return (
     <div
-      className="w-full rounded-3xl bg-cover bg-center p-6 relative text-white"
+      className="w-full rounded-3xl bg-cover bg-center p-6 relative
+       text-white flex flex-col justify-end"
       style={{ backgroundImage: `url(${image})`, height: `${height}px` }}
     >
       {/* ✅ Gray overlay (behind content) */}
@@ -26,11 +27,11 @@ const Frame: React.FC<ProjectCardProps> = ({ title, stack, description, link, im
           {stack}
         </div>
         <h2 className="text-2xl font-bold py-2">{title}</h2>
-        <p className="text-base py-4">{description}</p>
+        <p className="text-base py-4 w-[75%]">{description}</p>
         <Button
           href={link}
           label="View Case Study"
-          className="btn-primary"
+          className="btn-primary py-3!"
           icon=""
         />
       </div>
