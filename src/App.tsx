@@ -3,6 +3,7 @@ import Button from './components/button/Button';
 import { Icon } from "@iconify/react";
 import Logo from "./assets/wole_logo.jpg";
 import HeadShot from "./assets/Head_shot.jpg";
+import Frame from './components/frame/frame';
 
 
 function App() {
@@ -19,6 +20,52 @@ function App() {
     { image: Logo, alt: 'Logo', caption:'I received the SCMNS Honors Award during my masters', size:55 },
     { image: Logo, alt: 'Logo', caption:'I play the keyboard and direct music for my church', size:90 },
   ]
+  const projectData = [
+    {
+      stack: 'Frontend',
+      title: 'SCMNS Website Redesign',
+      description: 'Transforming EcoEats\' social media presence with a focus on eco-friendly.',
+      link: 'https://github.com/oluwoleadetifa/scmns-website',
+      image: 'https://get.pxhere.com/photo/web-domain-service-website-development-seo-access-backup-data-database-e-commerce-hosting-html-http-marketing-programming-provider-resource-server-storage-support-system-tech-technology-www-illustration-sharing-electronic-device-business-learning-graphic-design-job-1571969.jpg',
+      height: 400
+    }, {
+      stack: 'Frontend',
+      title: 'TREM Baltimore Website',
+      description: 'Transforming EcoEats\' social media presence with a focus on eco-friendly.',
+      link: 'https://www.trembaltimore.org/',
+      image: 'https://get.pxhere.com/photo/web-domain-service-website-development-seo-access-backup-data-database-e-commerce-hosting-html-http-marketing-programming-provider-resource-server-storage-support-system-tech-technology-www-illustration-sharing-electronic-device-business-learning-graphic-design-job-1571969.jpg',
+      height: 300
+    }, {
+      stack: 'Frontend',
+      title: 'T.O. Collections',
+      description: 'Transforming your social media presence with a simple website',
+      link: 'https://tocollections.com/',
+      image: 'https://get.pxhere.com/photo/web-domain-service-website-development-seo-access-backup-data-database-e-commerce-hosting-html-http-marketing-programming-provider-resource-server-storage-support-system-tech-technology-www-illustration-sharing-electronic-device-business-learning-graphic-design-job-1571969.jpg',
+      height: 400
+    },
+    {
+      stack: 'Frontend',
+      title: 'SCMNS Website Redesign',
+      description: 'Transforming EcoEats\' social media presence with a focus on eco-friendly.',
+      link: 'https://github.com/oluwoleadetifa/scmns-website',
+      image: 'https://get.pxhere.com/photo/web-domain-service-website-development-seo-access-backup-data-database-e-commerce-hosting-html-http-marketing-programming-provider-resource-server-storage-support-system-tech-technology-www-illustration-sharing-electronic-device-business-learning-graphic-design-job-1571969.jpg',
+      height: 300
+    }, {
+      stack: 'Frontend',
+      title: 'SCMNS Website Redesign',
+      description: 'Transforming EcoEats\' social media presence with a focus on eco-friendly.',
+      link: 'https://github.com/oluwoleadetifa/scmns-website',
+      image: 'https://get.pxhere.com/photo/web-domain-service-website-development-seo-access-backup-data-database-e-commerce-hosting-html-http-marketing-programming-provider-resource-server-storage-support-system-tech-technology-www-illustration-sharing-electronic-device-business-learning-graphic-design-job-1571969.jpg',
+      height: 400
+    }, {
+      stack: 'Frontend',
+      title: 'SCMNS Website Redesign',
+      description: 'Transforming EcoEats\' social media presence with a focus on eco-friendly.',
+      link: 'https://github.com/oluwoleadetifa/scmns-website',
+      image: 'https://get.pxhere.com/photo/web-domain-service-website-development-seo-access-backup-data-database-e-commerce-hosting-html-http-marketing-programming-provider-resource-server-storage-support-system-tech-technology-www-illustration-sharing-electronic-device-business-learning-graphic-design-job-1571969.jpg',
+      height: 300
+    },
+  ];
 
   return (
     <>
@@ -31,7 +78,7 @@ function App() {
             <div className='hidden md:block'>About Me</div>
             <div className='hidden md:block'> Services</div>
             <div className='hidden md:block '> Portfolio</div>
-            <Button href="https:google.com" label='Contact me' className='btn-primary ' icon=''/>
+            <Button href="mailto:adetifaoluwole@gmail.com" label='Contact me' className='btn-primary ' icon=''/>
           </div>
         </nav>
         {/* hero */}
@@ -107,16 +154,43 @@ function App() {
           </div>
           {/* three column project area
            */}
-          <div className='px-4 md:px-10 py-8'>
+          <div className='px-4 md:px-10 py-8 text-white'>
             <div className='py-2 bg-gray-400 w-[130px] rounded-2xl text-center text-white text-sm font-bold'>Portfolio</div>
             {/* <div className='w-[100%] sm:w-[45%] text-4xl font-bold flex border-left'>
               See my Projects
             </div> */}
             <div className="flex items-center gap-3 text-4xl mt-3">
                 <hr className="rotate-90 w-[2.25rem] border-t-4 border-gray-500" />
-                <span>See my Projects</span>
+                <span className='text-black'>See my Projects</span>
             </div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+              {projectData.map((data, id)=> <Frame key={id} {...data} />)}
+            </div>
+          </div>
+          {/* services I offer section */}
+          <div className='bg-gray-400 px-6 py-8 h-fit'>
+              <div className='block md:flex bg-white rounded-3xl text-black p-3 w-[100%] justify-between h-[20%]'>
+                <div className='w-[45%] flex flex-col px-[2%]'>
+                  <h2 className='text-2xl font-bold pt-[5%]'>
+                  Service I offer
+                  </h2>
+                  <p className='h-[40%] flex flex-col justify-evenly'>
+                    <span className='block my-3'>
+                      From sleek product pages to seamless checkout experiences, out collection is meticulously curated.
+                    </span> 
+                    <Button href='mailto:adetifaoluwole@gmail.com' icon='' label='Get Started now' className='btn-secondary w-[150px]'/>
+                  </p>
+                </div>
+                <div className='w-[45%] h-[100%] px-[2%]'>
+                  <img src={Logo} alt="" className='w-[100%] h-[20vh]'/>
+                </div>
+            </div>
+            <div>
+              
+            </div>
+            <div>
 
+            </div>
           </div>
         </div>
       </div>  
